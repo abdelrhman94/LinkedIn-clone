@@ -15,7 +15,14 @@ const Login = (props) => {
       <Section>
         <Hero>
           <h1>Welcome to your professional community</h1>
+          <img src="/images/login-hero.svg" alt="" />
         </Hero>
+        <Form>
+          <Google>
+            <img src="images/google.svg" alt="" />
+            Sing in with google
+          </Google>
+        </Form>
       </Section>
     </Container>
   );
@@ -76,7 +83,7 @@ const SingIn = styled.a`
   }
 `;
 
-const Section =styled.section`
+const Section = styled.section`
   display: flex;
   align-content: start;
   min-height: 700px;
@@ -89,19 +96,70 @@ const Section =styled.section`
   max-width: 1128px;
   align-items: center;
   margin: auto;
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     margin: auto;
     min-height: 0px;
   }
 `;
 
 const Hero = styled.div`
-  width:100%
-  h1{
-    padding-bottom: 0;
+  width: 100%;
+  h1 {
+    padding-bottom: 12px;
     width: 55%;
     font-size: 56px;
-     
+    color: #2977c9;
+    font-weight: 200;
+    line-height: 70px;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 48px;
+      width: 100%;
+      line-height: 60px;
+      font-weight: 400;
+    }
+  }
+  img {
+    z-index: -1;
+    width: 700px;
+    height: 670px;
+    position: absolute;
+    bottom: -2px;
+    right: -150px;
+    @media (max-width: 768px) {
+      height: 230px;
+      min-width: 374px;
+      position: initial;
+      width: inherit;
+    }
+  }
+`;
+
+const Form = styled.div`
+  margin-top: 100px;
+  width: 408px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+`;
+const Google = styled.button`
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: aliceblue;
+  vertical-align: middle;
+  z-index: 0;
+  transition-duration: 167ms;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  &:hover {
+    background-color: rgba(207, 207, 207, 0.25);
+    color: rgba(0, 0, 0, 0.75);
   }
 `;
 
