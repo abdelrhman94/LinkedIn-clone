@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Leftside = (props) => {
+const LeftSide = (props) => {
   return (
     <Container>
       <ArtCard>
@@ -197,4 +197,4 @@ const CommunityCard = styled(ArtCard)`
   }
 `;
 
-export default Leftside;
+export default LeftSide;
