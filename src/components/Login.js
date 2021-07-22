@@ -140,6 +140,7 @@ const Form = styled.div`
   width: 408px;
   @media (max-width: 768px) {
     margin-top: 20px;
+    width: 100%;
   }
 `;
 const Google = styled.button`
